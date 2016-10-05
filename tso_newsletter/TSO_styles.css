@@ -1,0 +1,45 @@
+<style type="text/css" id="hs-inline-css">
+    /*<![CDATA[*/
+    /* everything in this style tag will be inlined onto matching elements */
+    /* Some resets and issue fixes */
+#outlook a { padding:0; }
+body{ width:100% !important; -webkit-text; size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+table{padding:0;margin:0;border:0;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+.ReadMsgBody { width: 100%; }
+.ExternalClass {width:100%;}
+.backgroundTable {margin:0 auto; padding:0; width:100%;!important;}
+table td {border-collapse: collapse;}
+.ExternalClass * {line-height: 115%;}
+* {-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens: none;hyphens:none;}
+
+/* End reset */
+    td {font-family: 'Open Sans', arial, sans-serif;}
+    div { margin:0 !important; padding:0 !important; }
+    body { font-size: 150%; }
+    th{ display: block; text-align: left; font-weight: normal;}
+
+
+    img {  max-width: 100% !important; height: auto !important; }
+    .respondToFit , .responsiveImage { width: 100% !important; }
+
+
+    @media only screen and (min-width: 564px) {
+      th{display: table-cell !important; padding: 0 !important;}
+      .full-width{width:564px !important;}
+      .left-full{width: 369px !important;}
+      .left-left{width:350px !important; }
+      .left-spacer{width:32.85px !important;}
+      .article-text{width:295.65px !important; padding-top:5px!important;}
+      .right-spacer{width:17.5px !important;}
+      .right-full{width: 155px !important;vertical-align:top !important;border-left:20px solid #ffffff; border-right:20px solid #ffffff;}
+      .no-padding{padding:0 !important;}
+      .promo-center{width: 100% !important;text-align: center !important;}
+      .promo-top{padding-left:0 !important; padding-right:0 !important;padding-bottom: 40px!important; padding-top: 100px !important;}
+      .stack{display:block !important}
+      .tiny{width:0 !important; height: 0 !important; line-height:0 !important;display:none !important;}
+      .readThis{}
+      .promo-spacer{line-height: 40px !important}
+
+}
+    /*]]>*/
+</style>

@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+
+        <style type="text/css" id="hs-inline-css">
+            /*<![CDATA[*/
+            /* everything in this style tag will be inlined onto matching elements */
+            /* Some resets and issue fixes */
+        #outlook a { padding:0; }
+        body{ width:100% !important; -webkit-text; size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+        table{padding:0;margin:0;border:0;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+        .ReadMsgBody { width: 100%; }
+        .ExternalClass {width:100%;}
+        .backgroundTable {margin:0 auto; padding:0; width:100%;!important;}
+        table td {border-collapse: collapse;}
+        .ExternalClass * {line-height: 115%;}
+        /* End reset */
+            td {font-family: 'Open Sans', arial, sans-serif;}
+            div { margin:0 !important; padding:0 !important; }
+
+            @media only screen and (max-width: 560px) {
+
+                        body { font-size: 150%; }
+                        td, table, tr {
+                          width: 100% !important; display: block; box-sizing: border-box; max-width: 376px !important;
+                        }
+
+
+                        img {  max-width: 100% !important; height: auto !important; }
+                        .respondToFit , .responsiveImage { width: 100% !important; }
+                        .goAway{ display: none;}
+
+                    }
+            /*]]>*/
+        </style>
+    </head>
+
+    <body style="padding:0; margin:0">
+      <table width="564" align="center" style="margin: 0 auto;" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+        <td>
+        <!-- Preview text (text which appears right after subject in certain email clients) -->
+        <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+
+        <!-- View as webpage link -->
+        {% if content.create_page %}
+            <div>
+                Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+            </div>
+        {% endif %}
+
+</td>
+</tr>
+<td>
+        <!-- Insert body here -->
+<table >
+  <tr>
+
+      <!--header-->
+<td><table cellpadding="20" width="564"><tr>
+          <td align="right" style="background-color: #ffffff; color: #58595f; font-size: 12px; line-height: 24px;" height="" ><a href="http://thinksmartusa.com/"><img align="left" valign="middle" src="http://cdn2.hubspot.net/hubfs/2100315/logo.png"/></a> <span style="margin-left: 30px; margin-right: 10px;">Issue 1 | June 2016</span></td>
+</tr></table></td>
+
+  </tr>
+  <!--end header-->
+  <!--main section-->
+  <tr>
+    <td style="background-color: #e6e7e8">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!--left-->
+
+          <td valign="top" bgcolor="#e6e7e8" style="width: 369px;">
+
+              <table cellpadding="0" border="0">
+                <tr><td>&nbsp;</td></tr>
+                <!--Title 1 --><tr><td>
+                <table cellspacing="0" cellpadding="0" width="350" style="border-bottom: 1px solid #199fda;">
+                    <tr>
+                        <td width="10%" >&nbsp;</td>
+                        <td style="font-size: 16px; text-transform: uppercase; color: #58595f; letter-spacing: 0.1em;font-weight: bold; margin:0;padding:0;">Sales Operations</td>
+                        </tr>
+                    </table>
+              </td>
+              </tr>
+              <!--END TITLE 1--><!--SECTION 1-->
+              <tr><td><table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                      <td width="0" height="0" style="border-left: 350px solid transparent; border-bottom: 10px solid #7ab64a; border-top: 0 solid transparent; border-right: 0 solid transparent; width: 0; height:0;">&nbsp;</td>
+                 </tr>
+
+                  <tr>
+                      <td style="background-color: #7ab64a;">
+                          <table bgcolor="#7ab64a" cellspacing="0" border="0" width="350" style="width: 350px;">
+                              <tr><td style="line-height: 8px;">&nbsp;</td></tr>
+                              <tr>
+                                  <td>
+                                      <table cellspacing="0" cellpadding="0" style="border-top: 2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff;">
+                                      <tr>
+                                          <td width="32.85" style="width: 32.85px;line-height: 8px;">&nbsp;</td>
+
+                                <td width="295.65" style="width: 295.65px;"><table cellspacing="0" border="0" cellpadding="5"><tr>
+
+                                 <td style="color: #ffffff; font-size: 12.5px; line-height: 16px;">
+                                      <a href="https://hbr.org/2014/12/why-sales-ops-is-so-hard-to-get-right" style="font-size: 15px; font-weight: bold;color: #ffffff;line-height: 20px;">
+                                          Why Sales Ops Is So Hard to Get Right</a><br/>
+                                      Sales operations is critical but difficult to get right.  This HBR article looks at why.<br/>
+                                  </td></tr></table>
+
+
+                                </td>
+                                 </tr>
+                                      </table>
+                                  </td>
+                                  <td width="17.5" style="width: 17.5px; line-height: 8px;">&nbsp;</td>
+                              </tr>
+                              <tr><td style="line-height: 8px;">&nbsp;</td></tr>
+                          </table>
+                      </td>
+                 </tr>
+                  <tr>
+                      <td width="0" height="0" style="border-left: 350px solid transparent; border-top: 10px solid #7ab64a; width: 0; height: 0; border-right: 0 solid transparent; border-bottom: 0 solid transparent; line-height: 2px;">&nbsp;</td>
+                  </tr>
+                  </table>
+          </td>
+        </tr>
+        <!--END SECTION--><!--SECTION 2-->
+              <tr>
+              <td><table cellspacing="0" cellpadding="0" border="0" width="350">
+                  <tr>
+                      <td width="0" height="0" style="border-top: 0 solid transparent; border-left: 0 solid transparent; border-right: 350px solid transparent; border-bottom: 10px solid #199fda; width: 0; height: 0;line-height: 2px;"></td>
+                  </tr>
+                  <tr><td bgcolor="#199fda" style="line-height: 8px;">&nbsp;</td></tr>
+                  <tr>
+                     <td bgcolor="#199fda">
+                         <table cellpadding="5" cellspacing="0" border="0">
+                             <tr>
+                                 <td width="25" style="border-bottom: 2px solid #199fda;width: 25px;line-height: 8px;">&nbsp;</td>
+                                 <td width="296"style="border: 2px solid #ffffff;color: #ffffff; font-size: 12.5px; line-height: 16px; width: 296px;">
+                             <a href="https://medium.com/@kylesamani/why-does-sales-ops-matter-a730d37c2d8#.ac044ebzr" style="font-size: 15px; font-weight: bold;color: #ffffff;line-height: 20px;">Why Does Sales Ops Matter?</a><br/>
+                             Sales ops can lead to improvements across all fronts. Why is it so under-appreciated?
+                         </td>
+                                 <td width="11.5" style="border-bottom: 2px solid #199fda; width: 11.5px;">&nbsp;</td>
+                             </tr>
+                         </table>
+
+                     </td>
+                  </tr>
+                  <tr><td bgcolor="#199fda" style="line-height: 8px;">&nbsp;</td></tr>
+                  <tr>
+                     <td width="0" height="0" style="border-right: 350px solid transparent; border-top: 10px solid #199fda; border-bottom: 0 solid transparent; border-left: 0 solid transparent; width: 0; height: 0;line-height: 2px;"></td>
+                  </tr>
+
+              </table>
+
+              </td>
+              </tr>
+<!--END SECTION--><!--SECTION 3-->
+
+<tr><td><table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td width="0" height="0" style="border-left: 350px solid transparent; border-bottom: 10px solid #7ab64a; border-top: 0 solid transparent; border-right: 0 solid transparent; width: 0; height:0;line-height: 2px;">&nbsp;</td>
+   </tr>
+
+    <tr>
+        <td style="background-color: #7ab64a;">
+            <table bgcolor="#7ab64a" cellspacing="0" border="0" width="350" style="width: 350px;">
+                <tr><td style="line-height: 8px;">&nbsp;</td></tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" style="border-top: 2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff;">
+                        <tr>
+                            <td width="32.85" style="width: 32.85px;line-height: 8px;">&nbsp;</td>
+                   <td width="295.65" style="color: #ffffff; font-size: 12.5px; line-height: 16px; padding-top: 5px; width: 295.65px;">
+                                                  <a href="http://www.curata.com/blog/content-marketing-tools-ultimate-list/" style="font-size: 15px; font-weight: bold;color: #ffffff;line-height: 20px;">A Ridiculously Complete Guide to Marketing Tech</a><br/>
+                                                  There's enough marketing technology out there to make a person's head hurt.
+                                              </td>
+                                          </tr>
+                                      </table>
+                                  </td>
+                                  <td width="17.5" style="width: 17.5px; line-height: 8px;">&nbsp;</td>
+                              </tr>
+                              <tr><td style="line-height: 8px;">&nbsp;</td></tr>
+                          </table>
+                      </td>
+                 </tr>
+                  <tr>
+                      <td width="0" height="0" style="border-left: 350px solid transparent; border-top: 10px solid #7ab64a; width: 0; height: 0; border-right: 0 solid transparent; border-bottom: 0 solid transparent; line-height: 2px;">&nbsp;</td>
+                  </tr>
+                  </table>
+          </td>
+        </tr>
+        <!--END SECTION 3--><!--TITLE 2-->
+
+              <tr><td style="padding: 20px 0 0 0; margin-bottom: 0;" >
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                  <tr>
+                    <td rowspan="2" style="border-bottom:1px solid #199fda;width: 46px;">&nbsp;</td>
+                    <td colspan="4" style="padding-right: 5px;font-size: 16px; text-transform: uppercase; color: #58595f; letter-spacing: 0.1em;font-weight: bold; text-align: right; width: 196px;">Sales &amp; Marketing<br> Leadership</td>
+                    <td rowspan="2" style="border-left:1px solid #199fda; border-bottom:1px solid #199fda; width: 20px;">&nbsp;</td>
+                    <td rowspan="6" style="width: 32px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#7ab64a" style="width: 122px; border-bottom:1px solid #7ab64a;"></td>
+                    <td colspan="3" style="border-bottom:1px solid #199fda">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" style="">&nbsp;</td>
+                    <td rowspan="2" valign="top" bgcolor="#7ab64a" style="padding: 0 19px 13px;color: #ffffff; font-size: 12.5px; line-height: 16px;"><a href="http://hubs.ly/H03lz-z0" style="font-size: 16px; font-weight: bold;color: #ffffff;line-height: 20px; text-decoration:none;">Top 5 Sales Leadership Challenges</a><br><br>
+                      Five leadership challenges presented in tasty infographic format.</td>
+                    <td colspan="3" height="2" style="height:2px;">&nbsp;</td>
+                    <td rowspan="4" style="border-left:1px solid #199fda;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 15px;">&nbsp;</td>
+                    <td rowspan="2" bgcolor="#199fda" style="padding: 23px 19px; color: #ffffff; font-size: 12.5px; line-height: 16px;"><a href="https://blogs.oracle.com/marketingcloud/why-you-are-losing-leads-by-not-integrating-events-with-marketing-automation" style="font-size: 16px; font-weight: bold;color: #ffffff;line-height: 20px; text-decoration:none;">Are You Losing Leads by not Integrating Events with Marketing Automation?</a><br><br>
+                        Spoiler alert: yes.</td>
+                    <td style="width:16px;">&nbsp;</td>
+                  </tr><tr>
+                    <td colspan="3" style="">&nbsp;</td>
+                    <td style="">&nbsp;</td>
+                  </tr><tr>
+                    <td colspan="5" style="">&nbsp;</td>
+                  </tr>
+                </table>
+          </td>
+              </tr>
+
+<!--END SECTION--><!--TITLE 3-->
+              <tr><td><table width="100%"><tr><td style="padding-left: 40px; padding-top: 0; margin-top: 0;border-bottom: 1px solid #199fda; border-collapse: collapse;">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                <td></td>
+                <td style="font-size: 16px; text-transform: uppercase; color: #58595f; letter-spacing: 0.1em;font-weight: bold; ">
+                  Motivation
+                </td>
+              </tr>
+            </table>
+            </td>
+            <td style="border: 0; width: 40%;"></td>
+          </tr></table></td>
+              </tr>
+              <tr><td style="padding-top: 10px; padding-left: 5px;">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                  <tr>
+                    <td width="10" width="227"rowspan="2" bgcolor="#199fda" style="width: 10px;">&nbsp;</td>
+                    <td height="13" bgcolor="#199fda" style="height:13px; width:227px;">&nbsp;</td>
+                    <td style="">&nbsp;</td>
+                    <td style="">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="last2" bgcolor="#ffffff" style="color: #58595f; font-size: 12.5px; line-height: 15px; padding: 10px 0 0 10px; border: 0 solid #ffffff;-moz-box-shadow: -3px -3px 3px #888;-webkit-box-shadow: -3px -3px 3px #888;box-shadow: -3px -3px 3px #888;"><a href="http://confidencecenter.com/blog/7-key-areas-employee-morale/" style="font-size: 14px; font-weight: bold;color: #58595f;line-height: 20px; text-decoration:none;text-transform: uppercase; ">7 Key Areas of Employee Morale</a><br>
+Motivate your employees with these 7 cheap ideas.</td>
+                    <td bgcolor="#ffffff" style="border: 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="">&nbsp;</td>
+                    <td colspan="3" bgcolor="#ffffff" style="-moz-box-shadow: -3px 0 3px -3px #888;-webkit-box-shadow: -3px 0 3px -3px #888;box-shadow: -3px 0 3px -3px #888;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                  <tr>
+                    <td rowspan="3" style="width: 12px;">&nbsp;</td>
+                    <td colspan="2" bgcolor="#ffffff" style="padding:0;margin:0;"></td>
+                    <td >&nbsp;</td>
+                  </tr>
+                  <tr>
+                  <td class="final" colspan="2" bgcolor="#ffffff" style="color: #58595f; font-size: 12.5px; line-height: 15px; padding:0 0 10px 10px; -moz-box-shadow: 3px 3px 3px #888;-webkit-box-shadow: 3px 3px 3px #888;box-shadow: 3px 3px 3px #888;"><a href="http://www.snacknation.com/blog/ways-to-reward-employees/" style="font-size: 14px; font-weight: bold;color: #58595f;line-height: 20px; text-decoration:none; text-transform: uppercase;">Over One Hundred Ways to reward employees</a><br>
+              A fairly definitive list of reward and recognition ideas.</td>
+                  <td rowspan="2" bgcolor="#7ab64a" width="9" style="width:9px;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="">&nbsp;</td>
+                  <td bgcolor="#7ab64a" width="300" height="10"style="height:10px; width: 300px;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+</table>
+</td>
+<!--end left-->
+          <!--right-->
+          <td bgcolor="#e17b12" border="0" width="195" style="width: 195px;border-top: 0 solid transparent; border-right: 10px solid #ffffff; border-bottom: 0 solid transparent; border-left: 10px solid #ffffff; background-color: #e17b12;">
+            <table bgcolor="#e17b12" style="background-color: #e17b12;">
+              <tr>
+                <td style="text-align: center; color: #ffffff; font-size: 18px;">
+Want Real-time leaderboards for your employee rewards program?
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="img/book.png"/>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center; color: #ffffff; font-size: 18px;">
+            Ready to throw away your spreadsheets?
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Read this how-to guide
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center; color: #ffffff; font-size: 18px;">
+            Ready to throw away your spreadsheets?
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+<!--end main-->
+  <!--footer-->
+  <tr>
+    <td colspan="2" class="mobile-only">
+      <table class="mobile-only" cellpadding="10">
+        <tr>
+          <td class="mobile-only"style="background-color: #199fda; color: #ffffff; font-weight: bold; font-size: 22px; text-align: center;">
+About ThinkSmartOne&trade;</td>
+</tr>
+<tr>
+<td class="mobile-only"style="color: #58595f; font-size: 16px; text-align: center;">
+ThinkSmartOne is a revolutionary automated motivation program built upon the Salesforce.com platform.
+</td>
+</tr>
+<tr>
+<td class="mobile-only"style="color: #199fda; font-size: 16px; text-align: center; border-bottom: 1px solid black;">
+For more information or an online demo contact us at<br> <span style="font-weight: bold;">1 (855) 373-5374</span>
+    </td>
+  </tr>
+  <!--end footer-->
+  <!--social sharing -->
+  <tr>
+    <td class="mobile-only"align="center">
+      <img src="http://cdn2.hubspot.net/hubfs/2100315/facebook.png"/><a href="https://twitter.com/ThinkSmart_SA"><img src="http://cdn2.hubspot.net/hubfs/2100315/twitter.png" hspace="15"/></a><a href="https://www.linkedin.com/company/931416"><img src="http://cdn2.hubspot.net/hubfs/2100315/LinkedIn.png"/></a>
+    </td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+</td>
+</tr>
+<tr>
+  <td>
+
+        <!-- Office location information and unsubscribe links -->
+        <p id="footer">
+            {{ site_settings.company_name }}&nbsp;
+            {{ site_settings.company_street_address_1 }}&nbsp;
+            {{ site_settings.company_street_address_2 }}&nbsp;
+            {{ site_settings.company_city }}&nbsp;
+            {{ site_settings.company_state }}&nbsp;
+            {{ site_settings.company_zip }}&nbsp;
+            {{ site_settings.company_country }}&nbsp;
+            <br/>
+            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+            <br/>
+            Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+            <br/>
+            <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+    </body>
+</html>

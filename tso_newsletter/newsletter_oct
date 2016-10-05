@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+
+        <style type="text/css" id="hs-inline-css">
+            /*<![CDATA[*/
+            /* everything in this style tag will be inlined onto matching elements */
+            /* Some resets and issue fixes */
+        body{padding:0; margin:0;font-family: 'Open Sans', arial, sans-serif;background-color: #ffffff; color: #58595f; font-size: 12px; line-height: 24px;}
+        .wrapper{margin:0 auto;border: 1px solid black; width: 564px;}
+        #preview_text{display:none!important;}
+        .full{width: 100%;}
+        .half{width: 50%;}
+        .center{text-align: center}
+        .header-left{text-align: right;}
+        .left-full{background-color: #e6e7e8; width: 369px;}
+        .right-full{background-color: #e17b12;border-left: 20px solid #ffffff; border-right: 20px solid #ffffff;width: 155px; text-align: left;}
+        .footer-bar{background-color: #199fda; text-align: center;}
+        .footer-bar a{color: #ffffff;font-weight: bold; font-size: 22px; text-decoration: none;}
+        .footer {font-size: 16px; text-align: center;}
+        .footer-cta{color: #199fda; font-size: 16px; text-align: center; border-bottom: 1px solid black;}
+        .title-1-wrapper{border-bottom: 1px solid #199fda;width:350px;}
+        .left-spacer{width:32.85px;}
+        .title-1{text-align: left; font-size: 16px; text-transform: uppercase; letter-spacing: 0.1em;font-weight: bold; margin:0;padding:0 20px;}
+        .title-spacer{line-height: 24px;}
+        .green-triangle-top{border-left: 350px solid transparent; border-bottom: 10px solid #7ab64a; border-top: 0 solid transparent; border-right: 0 solid transparent; width: 0; height:0;line-height: 2px;}
+        .green-triangle-bottom{border-left: 350px solid transparent; border-top: 10px solid #7ab64a; width: 0; height: 0; border-right: 0 solid transparent; border-bottom: 0 solid transparent; line-height: 2px;}
+        .green{background-color: #7ab64a;}
+        .green .title-1-wrapper{border:0; width: 350px;}
+        .eight{line-height: 8px;}
+        .article-1-wrapper{border-top: 2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff;}
+        .article-text{color: #ffffff; font-size: 12.5px; line-height: 20px; padding: 0 20px;text-align: left;width:295.65px;padding-top:5px;}
+        .article-text a{font-size: 15px; font-weight: bold;color: #ffffff;line-height: 20px; text-transform:capitalize;}
+        .article-2-wrapper{width: 356.667px;}
+        .blue-triangle-top{border-top: 0 solid transparent; border-left: 0 solid transparent; border-right: 350px solid transparent; border-bottom: 10px solid #199fda; width: 0; height: 0;line-height: 2px;}
+        .right-spacer{width:17.5px;}
+        .article-2-spacer{padding: 0 17px;}
+        .border-2{border: 2px solid #ffffff;}
+        .left-spacer-2{border-bottom: 2px solid #199fda;line-height: 8px;width:32.85px;}
+        .right-spacer-2{border-bottom: 2px solid #199fda;width:17.5px;}
+        .left-spacer-title-2{border-bottom:1px solid #199fda;}
+        .blue-triangle-bottom{border-right: 350px solid transparent; border-top: 10px solid #199fda; border-bottom: 0 solid transparent; border-left: 0 solid transparent; width: 0; height: 0;line-height: 2px;}
+        .middle-wrapper{padding: 40px 0 0 0; margin-bottom: 0;}
+        .middle-wrapper-table{width: 380px;}
+        @media only screen and (max-width: 564px){
+          .wrapper{width: 400px;}
+          table {width: 100%}
+          img {max-width: 100% !important; height: auto !important; }
+          table{padding:0;margin:0;border:0;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+          body{ width:100% !important; -webkit-text; size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+
+          td{display: block;}
+          .left-full{ display: block; text-align: left;width: 100%;}
+          .title-1-wrapper{width: auto;}
+          .right-full{display: block; width: 100%; border: 0px;}
+          .article-1-table{width: 350px;}
+          .article-1-wrapper{width: 325px;}
+          .blue-triangle-bottom, .green-triangle-bottom{display:inline;}
+          .green-triangle-top{border-left-width: 353px;}
+          .blue-bottom{border-bottom: solid #199fda;}
+        }
+        @media only screen and (max-width: 360px){
+          .wrapper{width: 300px;}
+          .green .title-1-wrapper, .article-1-table, .title-1-wrapper, .article-1-wrapper{width: 280px;}
+          .article-2-wrapper{width: 256.667px;}
+          .blue-triangle-bottom, .blue-triangle-top{border-right-width: 313px;}
+          .green-triangle-top, .green-triangle-bottom{border-left-width: 325px;}
+          .green-triangle-top{border-right: 3px solid #7ab64a;}
+          .article-text{width: auto;}
+        }
+            /*]]>*/
+        </style>
+    </head>
+<body>
+<table class="wrapper">
+  <tr><td><!-- Preview text (text which appears right after subject in certain email clients) -->
+        <div id="preview_text">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+
+        <!-- View as webpage link -->
+        {% if content.create_page %}
+            <div>
+                Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+            </div>
+        {% endif %}
+      </td>
+    </tr>
+    <!--header-->
+  <tr>
+    <td><table class="full" cellpadding="0" cellspacing="0"width="100%"><tr><td>
+  <table align="left" class="half"><tr>
+          <td align="right" class="header-right"><a href="http://thinksmartusa.com/"><img align="left" valign="middle" width="148" src="http://cdn2.hubspot.net/hubfs/2100315/Images/Logos/Logos_ThinkSmartOne/Logo_TSO_Light_Background-2.png"/></a> </td>
+        </tr>
+      </table><table align="right"><tr><td class="header-left">{% raw_html "month_year" label="month and year" value='Month and year' %}</td></tr></table></td>
+</tr></table></td>
+  </tr>
+<!--end header-->
+<!--main section-->
+  <tr>
+    <td>
+      <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!--left-->
+          <th class="left-full" valign="top" bgcolor="#e6e7e8">
+            <table cellpadding="0" border="0">
+              <tr><td>&nbsp;</td></tr>
+<!--TITLE 1 -->
+              <tr><td>
+                <table cellspacing="0" cellpadding="0" class="title-1-wrapper">
+                  <tr>
+                  <th class="left-spacer">&nbsp;</th>
+                  <th class="title-1" style="">{% raw_html "title_1" label="Title 1" value='Title 1' %}</th>
+                  </tr>
+                  </table>
+                </td></tr>
+<tr><td class="title-spacer">&nbsp;</td></tr>
+<!--END TITLE 1-->
+<!--ARTICLE 1-->
+              <tr><td>
+                <table cellspacing="0" cellpadding="0" border="0" class="article-1-table">
+                  <tr>
+                  <td class="green-triangle-top" width="0" height="0" style="">&nbsp;</td>
+                  </tr>
+                  <tr>
+                  <td class="green" >
+                  <table bgcolor="#7ab64a" cellspacing="0" border="0" class="title-1-wrapper green">
+                              <tr><td colspan="2" class="eight">&nbsp;</td></tr>
+                              <tr>
+                                  <td>
+                                      <table cellspacing="0" cellpadding="0" class="article-1-wrapper">
+
+                                      <tr>
+                                          <th class="left-spacer eight">&nbsp;</th>
+
+                                <th class="article-text" style=""><a href="{% text "link_1" label="link to article 1", value="enter url here" no_wrapper=True %}" style="">{% raw_html "header_1" label="Header 1" value='Header 1' %}</a>{% raw_html "blurb_1" label="blurb 1" value='Blurb 1' %}</th>
+                                 </tr>
+                                      </table>
+                                  </td>
+                                  <td class="right-spacer eight">&nbsp;</td>
+                              </tr>
+                              <tr><td colspan="2" class="eight">&nbsp;</td></tr>
+                          </table>
+                      </td>
+                 </tr>
+                  <tr>
+                      <td width="0" height="0" class="green-triangle-bottom">&nbsp;</td>
+                  </tr>
+                  </table>
+          </td>
+        </tr>
+<!--END ARTICLE--><!--ARTICLE 2-->
+              <tr>
+              <td><table class="article-2-wrapper" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                      <td width="0" height="0" class="blue-triangle-top" style=""></td>
+                  </tr>
+                  <tr><td bgcolor="#199fda" class="eight">&nbsp;</td></tr>
+                  <tr>
+                     <td class="article-2-spacer no-padding" bgcolor="#199fda">
+                         <table cellpadding="0" cellspacing="0" border="0" >
+                             <tr>
+                                 <td class="left-spacer-2">&nbsp;</td>
+                                 <td class="article-text border-2"><a href="{% text "link_2" label="link to article 2", value="enter url here" no_wrapper=True %}">{% raw_html "header_2" label="Header 2" value='Header 2' %}</a>{% raw_html "blurb_2" label="blurb 2" value='Blurb 2' %}</td>
+                                 <td class="right-spacer-2">&nbsp;</td>
+                             </tr>
+                         </table>
+
+                     </td>
+                  </tr>
+                  <tr><td bgcolor="#199fda" class="eight blue-bottom" style="border-bottom: solid #199fda;">&nbsp;</td></tr>
+                  <tr>
+                     <td width="0" height="0" class="blue-triangle-bottom"></td>
+                  </tr>
+
+              </table>
+
+              </td>
+              </tr>
+<!--END ARTICLE-->
+<!--ARTICLE 3-->
+              <tr><td>
+                <table cellspacing="0" cellpadding="0" border="0" class="article-1-table">
+                  <tr>
+                  <td class="green-triangle-top" width="0" height="0" style="">&nbsp;</td>
+                  </tr>
+                  <tr>
+                  <td class="green" >
+                  <table bgcolor="#7ab64a" cellspacing="0" border="0" class="title-1-wrapper green">
+                              <tr><td colspan="2" class="eight">&nbsp;</td></tr>
+                              <tr>
+                                  <td>
+                                      <table cellspacing="0" cellpadding="0" class="article-1-wrapper">
+
+                                      <tr>
+                                          <th class="left-spacer eight">&nbsp;</th>
+
+                                <th class="article-text" style=""><a href="{% text "link_3" label="link to article 3", value="enter url here" no_wrapper=True %}" style="">{% raw_html "header_3" label="Header 3" value='Header 3' %}</a>{% raw_html "blurb_3" label="blurb 3" value='Blurb 3' %}</th>
+                                 </tr>
+                                      </table>
+                                  </td>
+                                  <td class="right-spacer eight">&nbsp;</td>
+                              </tr>
+                              <tr><td colspan="2" class="eight">&nbsp;</td></tr>
+                          </table>
+                      </td>
+                 </tr>
+                  <tr>
+                      <td width="0" height="0" class="green-triangle-bottom">&nbsp;</td>
+                  </tr>
+                  </table>
+          </td>
+          </tr>
+<!--END ARTICLE 3-->
+<!--MIDDLE SECTION-->
+
+        <tr><td class="middle-wrapper">
+          <table cellpadding="0" cellspacing="0" border="0" class="middle-wrapper-table">
+<!--TITLE 2-->
+              <tr>
+                <td rowspan="2" class="left-spacer-title-2">&nbsp;</td>
+                <td colspan="4" style="padding-right: 5px;font-size: 16px; text-transform: uppercase; color: #58595f; letter-spacing: 0.1em;font-weight: bold; text-align: right; width: 196px;">{% raw_html "title_2" label="Title 2" value='Title 2' %}</td>
+                <td rowspan="2" style="border-left:1px solid #199fda; border-bottom:1px solid #199fda; width: 20px;">&nbsp;</td>
+                <td rowspan="6" style="width: 32px;">&nbsp;</td>
+                </tr>
+                <tr>
+                <td bgcolor="#7ab64a" style="width: 122px; border-bottom:1px solid #7ab64a;"></td>
+                <td colspan="3" style="border-bottom:1px solid #199fda">&nbsp;</td>
+                </tr>
+<!--END TITLE 2-->
+<!--ARTICLE 4-->
+                <tr>
+                <td rowspan="2" style="">&nbsp;</td>
+                <td rowspan="2" valign="top" bgcolor="#7ab64a" style="padding: 0 19px 13px;color: #ffffff; font-size: 12.5px; line-height: 16px;text-align: left;"><a href="{% text "link_4" label="link to article 4", value="enter url here" no_wrapper=True %}" style="font-size: 15.4px; font-weight: bold;color: #ffffff;line-height: 20px; text-decoration:none; text-transform:capitalize;">{% raw_html "header_4" label="Header 4" value='Header 4' %}</a><br/>{% raw_html "blurb_4" label="blurb 4" value='Blurb 4' %}</td>
+                <td colspan="3" height="2" style="height:2px;">&nbsp;</td>
+                <td rowspan="4" style="border-left:1px solid #199fda;">&nbsp;</td>
+                </tr>
+<!--END ARTICLE 4-->
+<!--ARTICLE 5-->
+                <tr>
+                <td style="width: 15px;">&nbsp;</td>
+                <td rowspan="2" bgcolor="#199fda" style="padding: 23px 19px; color: #ffffff; font-size: 12.5px; line-height: 16px; text-align: left;"><a href="{% text "link_5" label="link to article 5", value="enter url here" no_wrapper=True %}" style="font-size: 14.4px; font-weight: bold;color: #ffffff;line-height: 20px; text-decoration:none;text-transform:capitalize;">{% raw_html "header_5" label="Header 5" value='Header 5' %}</a><br/>{% raw_html "blurb_5" label="blurb 5" value='Blurb 5' %}<br><br></td>
+                <td style="width:16px;">&nbsp;</td>
+                </tr><tr>
+                <td colspan="3" style="">&nbsp;</td>
+                <td style="">&nbsp;</td>
+                </tr><tr>
+                <td colspan="5" style="">&nbsp;</td>
+                </tr>
+                </table>
+                </td>
+                </tr>
+<!--END ARTICLE 5-->
+<!--END SECTION-->
+</table>
+          </th>
+<!--end left-->
+<!--right-->
+          <th class="right-full">right side with CTA</th>
+        </tr>
+      </table>
+    </td>
+    </tr>
+    <!--end main-->
+  <!--footer-->
+    <tr>
+      <td>
+        <table cellpadding="10">
+        <tr>
+          <td class="footer-bar">
+<a href="http://thinksmartone.com/" style="">About ThinkSmartOne&trade;</a></td>
+</tr>
+<tr>
+<td class="footer" style="">
+ThinkSmartOne is a revolutionary automated motivation software built upon the Salesforce.com platform.
+</td>
+</tr>
+<tr>
+<td class="footer-cta" style="">
+For more information or an online demo contact us at<br> <a href="tel:+18553735374"><strong>1 (855) 373-5374</strong></a>
+    </td>
+  </tr>
+  <!--end footer-->
+  <!--social sharing -->
+  <tr>
+    <td align="center">
+      <a href="https://www.facebook.com/thinksmartone/"><img src="http://cdn2.hubspot.net/hubfs/2100315/facebook.png" alt="facebook"/></a><a href="https://twitter.com/ThinkSmart_One"><img src="http://cdn2.hubspot.net/hubfs/2100315/twitter.png" alt="twitter" hspace="15"/></a><a href="https://www.linkedin.com/company/6432555"><img src="http://cdn2.hubspot.net/hubfs/2100315/LinkedIn.png" alt="linkedIn"/></a>
+    </td>
+  </tr>
+</table>
+      </td>
+      </tr>
+</table>
+</body>
+</html>
